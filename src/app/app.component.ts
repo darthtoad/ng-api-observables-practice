@@ -15,19 +15,19 @@ export class AppComponent implements OnInit {
 
   constructor(private appService: AppService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.observableWord = this.appService.getWord();
     this.observableWord.subscribe(
-      word => this.currentWord = word;
-      error => this.errorMessage = <any>error
+      word => this.currentWord = word,
+      error => this.errorMessage = <any>error;
     );
   }
 
-  randomWord(): void {
+  randomWord() {
     this.observableWord = this.appService.getWord();
     this.observableWord.subscribe(
-      word => this.currentWord = word;
-      error => this.errorMessage = <any>error
+      word => this.currentWord = word,
+      error => this.errorMessage = <any>error;
     );
   }
 }

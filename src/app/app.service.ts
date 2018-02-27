@@ -14,7 +14,7 @@ export class AppService {
   getWord(): Observable<string> {
     return this.http.get(this.url)
     .map(this.extractData)
-    .catch(this.handleErrorObservable);
+    .catch(this.handleError);
   }
   private extractData(res: Response) {
     let body = res.json();
