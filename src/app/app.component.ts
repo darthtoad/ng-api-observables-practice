@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     this.observableWord = this.appService.getWord();
     this.observableWord.subscribe(
       word => this.currentWord = word,
-      error => this.errorMessage = <any>error;
+      error => this.errorMessage = <any>error
     );
   }
 
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     this.observableWord = this.appService.getWord();
     this.observableWord.subscribe(
       word => this.currentWord = word,
-      error => this.errorMessage = <any>error;
+      error => this.errorMessage = <any>error
     );
   }
 }
